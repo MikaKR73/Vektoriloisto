@@ -9,11 +9,13 @@
 
 void setup(){
   pinMode(LedS1V, OUTPUT);
+  pinMode(LedS2V, OUTPUT);
     Serial.begin(9600);
 }
 #define VIIVE 10 // Määritetään viive
-int tehoS1 = 0, tehoS2 = 0; // Märittää tehoS1n nollaan
-bool laskentaS1 = true, laskentaS2 = true; // Merkitsee pienenetäänkö ledin tehoS1ja
+
+int tehoS1 = 0, tehoS2 = 0; // Märittää tehoS1 ja tehoS2 nollaan
+bool laskentaS1 = true, laskentaS2 = true; // Merkitsee pienenetäänkö ledin laskentaS1 ja laskenta S2
 
 void BreathS1(){
  analogWrite(LedS1V, tehoS1); // Kirjotaa ledille tehoS1

@@ -12,11 +12,14 @@ bool laskenta = true; //merkitsee pienenetäänkö ledin tehoja
 void loop(){
   analogWrite(LedS1V, teho);
     int x = Serial.read();
-    Serial.println(teho);
  if(laskenta == true){
   teho++; //Kasvattaa muuttujaa yhdellä
+    Serial.print("Menee ylös:");
+    Serial.println(teho);
  }else{
    teho--; //Pienetää muutujaa
+   Serial.print("Menee alas:");
+   Serial.println(teho);
  }
  if(teho >= maksimi){
    laskenta = false;

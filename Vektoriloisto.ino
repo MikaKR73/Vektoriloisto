@@ -14,11 +14,11 @@ void loop(){
     int x = Serial.read();
  if(laskenta == true){
   teho++; //Kasvattaa muuttujaa yhdellä
-    Serial.print("Menee ylös:");
+    Serial.print("Menee ylös: ");
     Serial.println(teho);
  }else{
    teho--; //Pienetää muutujaa
-   Serial.print("Menee alas:");
+   Serial.print("Menee alas: ");
    Serial.println(teho);
  }
  if(teho >= maksimi){

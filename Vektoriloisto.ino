@@ -21,7 +21,7 @@
 #define lisaaS3 3 //Määrittää laskenta nopeuden
 #define lisaaS4 1 //Määrittää laskenta nopeuden
 #define lisaaS5 2 //Määrittää laskenta nopeuden
-#define lisaaS6 2 //Määrittää laskenta nopeuden
+#define lisaaS6 3 //Määrittää laskenta nopeuden
 
 void setup(){
   pinMode(LedS1V, OUTPUT);

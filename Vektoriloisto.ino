@@ -6,26 +6,34 @@ void setup(){
     Serial.begin(9600);
 }
 #define VIIVE 50 // Määritetään viive
-int teho = 0;
-bool laskenta = true; //merkitsee pienenetäänkö ledin tehoja
+int teho = 0; // Märittää tehon nollaan
+bool laskenta = true; // Merkitsee pienenetäänkö ledin tehoja
 
-void loop(){
-  analogWrite(LedS1V, teho);
+void Breath(){
+  analogWrite(LedS1V, teho); // Kirjotaa ledille tehon
     int x = Serial.read();
  if(laskenta == true){
-  teho++; //Kasvattaa muuttujaa yhdellä
+  teho++; //Kasvattaa muuttujaa yhdellä ja tulostaa tiedot
     Serial.print("Menee ylös: ");
     Serial.println(teho);
  }else{
-   teho--; //Pienetää muutujaa
+   teho--; //Pienetää muutujaa ja tulostaa tiedot
    Serial.print("Menee alas: ");
    Serial.println(teho);
  }
  if(teho >= maksimi){
-   laskenta = false;
+   laskenta = false; // merkitsee muuttujan pienetämiseen kun saatu maksimi arvo
+   Serial.print("Saavutettu maksimi: ");
+   Serial.println(teho);
  }
  if(teho <=0){
-  laskenta = true;
+  laskenta = true; // Merkitsee muuttujan suurentamiseen kun saatu minimi
+   Serial.print("Saavutettu minimi: ");
+   Serial.println(teho);
  }
-   delay(VIIVE);
+   delay(VIIVE); // Viive ennekuin jatkaa
+}
+
+void loop(){
+  Breath();
 }

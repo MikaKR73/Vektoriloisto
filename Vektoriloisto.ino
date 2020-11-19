@@ -1,5 +1,6 @@
 #define LedS1V 10 // Määritellään ledin paikka
 #define maksimi 255 // Maksimi teho ledille
+#define minimi 0
 
 void setup(){
   pinMode(LedS1V, OUTPUT);
@@ -26,7 +27,7 @@ void Breath(){
    Serial.print("Saavutettu maksimi: ");
    Serial.println(teho);
  }
- if(teho <=0){
+ if(teho <= minimi){
   laskenta = true; // Merkitsee muuttujan suurentamiseen kun saatu minimi
    Serial.print("Saavutettu minimi: ");
    Serial.println(teho);

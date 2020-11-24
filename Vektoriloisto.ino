@@ -5,11 +5,11 @@
 #define LedS5V 5 // Määritellään ledin paikka
 #define LedS6V 3 // Määritellään ledin paikka
 #define maksimiS1 255 // Maksimi tehoS1 ledille
-#define maksimiS2 250 // Maksimi tehoS1 ledille
-#define maksimiS3 250 // Maksimi tehoS1 ledille
-#define maksimiS4 250 // Maksimi tehoS1 ledille
-#define maksimiS5 250 // Maksimi tehoS1 ledille
-#define maksimiS6 250 // Maksimi tehoS1 ledille
+#define maksimiS2 250 // Maksimi tehoS2 ledille
+#define maksimiS3 250 // Maksimi tehoS3 ledille
+#define maksimiS4 250 // Maksimi tehoS4 ledille
+#define maksimiS5 250 // Maksimi tehoS5 ledille
+#define maksimiS6 250 // Maksimi tehoS6 ledille
 #define minimiS1 0 // Määrittää Minimin
 #define minimiS2 0 // Määrittää Minimin
 #define minimiS3 0 // Määrittää Minimin
